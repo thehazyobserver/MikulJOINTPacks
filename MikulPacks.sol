@@ -1924,9 +1924,9 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
     string public baseURI;
     string public baseExtension = ".json";
     uint256 public cost = 0.01 ether;
-    uint256 public maxSupply = 100000;
+    uint256 public maxSupply = 1000000;
     uint8 public maxMintAmount = 100;
-    uint16 public nftPerAddressLimit = 1000;
+    uint16 public nftPerAddressLimit = 10000;
     bool public paused = false;
 
     mapping(address => uint256) private addressMintedBalance;
