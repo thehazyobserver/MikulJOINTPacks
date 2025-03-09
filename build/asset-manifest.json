@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.45fce86f.js",
-    "static/js/453.623666fe.chunk.js": "/static/js/453.623666fe.chunk.js",
+    "main.js": "/static/js/main.3cefd58f.js",
+    "static/js/453.f68b4a36.chunk.js": "/static/js/453.f68b4a36.chunk.js",
+    "static/media/bg.png": "/static/media/bg.ea3f6b2d222fefa3b2a1.png",
     "static/media/paintswap.png": "/static/media/paintswap.4c239924579b32b46ce7.png",
-    "static/media/bg.png": "/static/media/bg.79ea7342d53070c9eeca.png",
     "static/media/PassTheJoint.gif": "/static/media/PassTheJoint.bb4206bcb7fe3d39cd36.gif",
-    "static/media/JOINTPACK.jpg": "/static/media/JOINTPACK.1ddcacd104b09e9b6cd8.jpg",
+    "static/media/JOINTPACK.jpg": "/static/media/JOINTPACK.bdd4d7f0ef19e4d59674.jpg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.45fce86f.js.map": "/static/js/main.45fce86f.js.map",
-    "453.623666fe.chunk.js.map": "/static/js/453.623666fe.chunk.js.map"
+    "main.3cefd58f.js.map": "/static/js/main.3cefd58f.js.map",
+    "453.f68b4a36.chunk.js.map": "/static/js/453.f68b4a36.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.45fce86f.js"
+    "static/js/main.3cefd58f.js"
   ]
 }
