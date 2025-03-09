@@ -1,0 +1,15 @@
+{
+  "CONTRACT_ADDRESS": "0x9A303054C302B180772a96caded9858C7ab92e99",
+  "SCAN_LINK": "https://sonicscan.org/address/0x9a303054c302b180772a96caded9858c7ab92e99",
+  "NETWORK": {
+    "NAME": "Sonic Mainnet",
+    "SYMBOL": "S",
+    "ID": 146
+  },
+  "NFT_NAME": "JointPacks",
+  "SYMBOL": "Packs",
+  "GAS_LIMIT": 1000000,
+  "MARKETPLACE": "Paintswap",
+  "MARKETPLACE_LINK": "https://paintswap.finance/marketplace",
+  "SHOW_BACKGROUND": true
+}
