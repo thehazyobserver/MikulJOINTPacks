@@ -1930,9 +1930,9 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
     bool public paused = false;
 
     mapping(address => uint256) private addressMintedBalance;
+    mapping(address => bool) public whitelist;
 
     IERC20 public rewardToken;
-
     uint256 private nextTokenId = 1;
 
     // Events
@@ -1954,13 +1954,15 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
         return baseURI;
     }
 
-    // Public mint function
+    // Public mint function with whitelist check
     function mint(uint256 _mintAmount) public payable {
         require(!paused, "Paused");
         require(_mintAmount > 0 && _mintAmount <= maxMintAmount, "Invalid mint amount");
         require(nextTokenId + _mintAmount - 1 <= maxSupply, "Max supply reached");
 
+        // If not the owner, require that the caller is whitelisted
         if (msg.sender != owner()) {
+            require(whitelist[msg.sender], "Address not whitelisted");
             uint256 ownerMintedCount = addressMintedBalance[msg.sender];
             require(ownerMintedCount + _mintAmount <= nftPerAddressLimit, "Limit exceeded");
             require(msg.value >= cost * _mintAmount, "Insufficient funds");
@@ -1984,7 +1986,6 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
         ) % 100;
 
         uint256 rewardAmount = calculateReward(randomValue);
-
         uint256 contractBalance = rewardToken.balanceOf(address(this));
         if (rewardAmount > contractBalance) {
             rewardAmount = contractBalance;
@@ -2012,7 +2013,7 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
         } else if (rand == 98) {           // rand 98 (1%)
             return 420000e18;             // 420,000 tokens 
         } else {                           // rand 99 (1%)
-            return 1000000e18;           // 1,000,000 tokens
+            return 1000000e18;            // 1,000,000 tokens
         }
     }
 
@@ -2024,6 +2025,25 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
         return bytes(currentBaseURI).length > 0
             ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), baseExtension))
             : "";
+    }
+
+    // Whitelist management functions
+
+    // Add a single address to the whitelist
+    function addToWhitelist(address _address) external onlyOwner {
+        whitelist[_address] = true;
+    }
+
+    // Remove a single address from the whitelist
+    function removeFromWhitelist(address _address) external onlyOwner {
+        whitelist[_address] = false;
+    }
+
+    // Add multiple addresses to the whitelist
+    function addManyToWhitelist(address[] calldata _addresses) external onlyOwner {
+        for (uint256 i = 0; i < _addresses.length; i++) {
+            whitelist[_addresses[i]] = true;
+        }
     }
 
     // Only owner functions
