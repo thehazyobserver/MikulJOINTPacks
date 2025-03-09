@@ -1923,7 +1923,7 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
     // Contract variables
     string public baseURI;
     string public baseExtension = ".json";
-    uint256 public cost = 0.01 ether;
+    uint256 public cost = 0 ether;
     uint256 public maxSupply = 1000000;
     uint8 public maxMintAmount = 100;
     uint16 public nftPerAddressLimit = 10000;
@@ -1999,23 +1999,24 @@ contract MikulPacks is ERC721Enumerable, Ownable, ReentrancyGuard {
     }
 
     // Function to calculate the reward based on randomness
-    function calculateReward(uint256 rand) private pure returns (uint256) {
-        if (rand < 25) {                   // rand 0-24 (25%)
-            return 20000e18;              // 20,000 tokens
-        } else if (rand < 55) {            // rand 25-54 (30%)
-            return 42000e18;              // 42,000 tokens
-        } else if (rand < 80) {            // rand 55-79 (25%)
-            return 100000e18;             // 100,000 tokens
-        } else if (rand < 95) {            // rand 80-94 (15%)
-            return 150000e18;             // 150,000 tokens
-        } else if (rand < 98) {            // rand 95-97 (3%)
-            return 250000e18;             // 250,000 tokens
-        } else if (rand == 98) {           // rand 98 (1%)
-            return 420000e18;             // 420,000 tokens 
-        } else {                           // rand 99 (1%)
-            return 1000000e18;            // 1,000,000 tokens
-        }
+function calculateReward(uint256 rand) private pure returns (uint256) {
+    if (rand < 25) {                   // 25% chance
+        return 10000e18;               // 10,000 tokens
+    } else if (rand < 55) {            // next 30%
+        return 22250e18;               // 22,250 tokens
+    } else if (rand < 80) {            // next 25%
+        return 48000e18;               // 48,000 tokens
+    } else if (rand < 95) {            // next 15%
+        return 73000e18;               // 73,000 tokens
+    } else if (rand < 98) {            // next 3%
+        return 116000e18;              // 116,000 tokens
+    } else if (rand == 98) {           // next 1%
+        return 220000e18;              // 220,000 tokens
+    } else {                           // remaining 1%
+        return 420000e18;              // 420,000 tokens
     }
+}
+
 
     // Function to return the token URI
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
