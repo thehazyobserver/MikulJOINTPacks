@@ -152,9 +152,9 @@ const Leaderboard = () => {
 
   return (
     <LeaderboardContainer>
-      <LeaderboardTitle>TOP 100 $JOINT PACK STONERS</LeaderboardTitle>
+      <LeaderboardTitle>TOP 100 $MIKUL PACK STONERS</LeaderboardTitle>
       <LeaderboardSubtitle>
-        Top wallets that have received the most $JOINT from opening Packs.
+        Top wallets that have received the most $ from opening Packs.
       </LeaderboardSubtitle>
       <LeaderboardSubtitle>
         Connect wallet to load Leaderboard.
@@ -193,7 +193,7 @@ const Leaderboard = () => {
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
                 })}{" "}
-                $JOINT
+                $MIKUL
               </TotalSpan>
             </LeaderboardItem>
           ))}
