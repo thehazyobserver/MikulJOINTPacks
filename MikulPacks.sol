@@ -2017,7 +2017,6 @@ function calculateReward(uint256 rand) private pure returns (uint256) {
     }
 }
 
-
     // Function to return the token URI
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
