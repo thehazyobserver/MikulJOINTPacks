@@ -620,8 +620,11 @@ function InnerApp() {
                               textAlign: "center",
                               fontSize: 20,
                               fontWeight: "bold",
-                              color: "black",
+                              color: "white",
                               marginTop: "20px",
+                              backgroundColor: "rgba(0, 0, 0, 0.5)", // Add background color
+                              padding: "10px", // Optional: Add padding for better appearance
+                              borderRadius: "5px" 
                             }}
                           >
                             {rewardMessage}
