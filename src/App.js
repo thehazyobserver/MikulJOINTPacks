@@ -563,7 +563,7 @@ function InnerApp() {
       color: "white",
     }}
   >
-    PACKS CONTAIN ON AVERAGE 86,800 $MIKUL
+    PACKS CONTAIN ON AVERAGE 42,000 $MIKUL
   </s.TextSubTitle>
   <s.TextDescription
     style={{
