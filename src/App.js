@@ -620,7 +620,7 @@ function InnerApp() {
                               textAlign: "center",
                               fontSize: 20,
                               fontWeight: "bold",
-                              color: "white",
+                              color: "black",
                               marginTop: "20px",
                             }}
                           >
@@ -673,7 +673,7 @@ function InnerApp() {
                         style={{
                           textAlign: "center",
                           fontSize: 20,
-                          color: "white",
+                          color: "black",
                           marginTop: "60px",
                         }}
                       >
