@@ -154,7 +154,7 @@ const Leaderboard = () => {
     <LeaderboardContainer>
       <LeaderboardTitle>TOP 100 $MIKUL PACK STONERS</LeaderboardTitle>
       <LeaderboardSubtitle>
-        Top wallets that have received the most $ from opening Packs.
+        Top wallets that have received the most $MIKUL from opening MPacks.
       </LeaderboardSubtitle>
       <LeaderboardSubtitle>
         Connect wallet to load Leaderboard.
