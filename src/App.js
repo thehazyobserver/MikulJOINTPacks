@@ -554,7 +554,7 @@ function InnerApp() {
       color: "white",
     }}
   >
-    OPEN TO RECEIVE 20,000 TO 1 MILLION $MIKUL
+    OPEN TO RECEIVE 10,000 TO 420,000 $MIKUL
   </s.TextSubTitle>
   <s.TextSubTitle
     style={{
