@@ -505,7 +505,7 @@ function InnerApp() {
           )}
           {/* Always visible */}
           <a
-            href="https://paintswap.io/sonic/collections/joint-packs/listings"
+            href="https://paintswap.io/sonic/collections/0xe359c086ff6ebac406a77063ef4c47a6565d3a05/listings"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -662,7 +662,7 @@ function InnerApp() {
                               NO $MIKUL PACKS FOUND. DON'T STOP THE PARTY!
                             </s.TextDescription>
                             <a
-                              href="https://paintswap.io/sonic/collections/joint-packs/listings"
+                              href="https://paintswap.io/sonic/collections/0xe359c086ff6ebac406a77063ef4c47a6565d3a05/listings"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
